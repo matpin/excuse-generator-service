@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import connectDB from "../db/mongo/connection";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ app.use(express.json());
 
 const startServer = async () => {
   try {
+    await connectDB();
     app.listen(port, () => {
       console.log(`Server is listening on port ${port}`);
     });
