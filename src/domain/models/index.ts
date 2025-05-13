@@ -11,4 +11,4 @@ const excuseSchema = new Schema(
 );
 
 // Model export
-export const ExcuseModel = model<Excuse>("Excuse", excuseSchema);
+export const ExcuseModel = model<Excuse>("Parts", excuseSchema);
