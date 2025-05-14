@@ -9,5 +9,7 @@ export const generateExcuse = async (
     repo.getExcuse("delay"),
   ]);
 
+  if (!intro || !scapegoat || !delay) throw new Error("Missing data");
+
   return `${intro} ${scapegoat} ${delay}.`;
 };
